@@ -79,9 +79,9 @@ if src_image_file is not None:
     col1,col2=st.columns(2)
     for i in range(3):
         if i%2==0:
-            col1.image(temp_path+'\\'+random_temp_paths[i],width=300)
+            col1.image(temp_path+'/'+random_temp_paths[i],width=300)
         else:
-            col2.image(temp_path+'\\'+random_temp_paths[i],width=300)
+            col2.image(temp_path+'/'+random_temp_paths[i],width=300)
         
 
 
