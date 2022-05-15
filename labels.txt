@@ -1,0 +1,10 @@
+0 Animal
+1 Cartoon
+2 Chevron
+3 Floral
+4 Geometry
+5 Houndstooth
+6 Ikat
+7 Letternumb
+8 Others
+9 Plain
