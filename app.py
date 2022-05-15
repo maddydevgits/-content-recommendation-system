@@ -63,14 +63,21 @@ if src_image_file is not None:
     temp_path=os.path.join('data',labels[index_max].upper())
     #st.write(temp_path)
     temp_paths=(os.listdir(temp_path))
+    random_temp_paths_indexes=[]
+    while len(random_temp_paths_indexes)<3:
+        k=random.randint(0,len(temp_paths)-1)
+        #st.write(k)
+        if k not in random_temp_paths_indexes:
+            random_temp_paths_indexes.append(k)
+        else:
+            continue
     random_temp_paths=[]
-    for i in range(5):
-        k=random.randrange(len(temp_paths))
-        random_temp_paths.append(temp_paths[k])
+    for i in range(len(random_temp_paths_indexes)):
+        random_temp_paths.append(temp_paths[i])
     st.header('Recommended Dresses')
     #st.write(random_temp_paths)
     col1,col2=st.columns(2)
-    for i in range(5):
+    for i in range(3):
         if i%2==0:
             col1.image(temp_path+'\\'+random_temp_paths[i],width=300)
         else:
